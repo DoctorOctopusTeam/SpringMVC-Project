@@ -1,13 +1,12 @@
-package com.telerikacademy.hibernatedemo;
+package com.telerikacademy.projectattempt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HibernateDemoApplication {
+public class ProjectAttemptApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(HibernateDemoApplication.class, args);
+        SpringApplication.run(ProjectAttemptApplication.class, args);
     }
-
 }
