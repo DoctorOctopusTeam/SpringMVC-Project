@@ -1,2 +1,2 @@
-# SpringMVC-Project
-Telerik academy assignment - module 3
+# SpringMVC
+First steps in SpringMVC
