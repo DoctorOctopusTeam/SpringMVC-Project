@@ -36,7 +36,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public int getAverage(Car car) {
+    public Double getAverage(Car car) {
         return carRepository.getAverage(car);
     }
 }

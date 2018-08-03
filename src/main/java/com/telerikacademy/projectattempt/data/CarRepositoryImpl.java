@@ -4,6 +4,7 @@ import com.telerikacademy.projectattempt.models.Car;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -46,20 +47,21 @@ public class CarRepositoryImpl implements CarRepository {
         return cars;
     }
 
-    //not finished => not working
+    //gets the average consume of ALL cars -> not using the criteria
     @Override
-    public int getAverage(Car car) {
-        List<Integer> averageConsume = new ArrayList<>();
+    public Double getAverage(Car car) {
+        Double c = 0.0;
 
         try (Session session = factory.openSession()) {
             session.beginTransaction();
-            averageConsume = session.createQuery("select avg(car.consumeFuel) from Car car").list();
+            Query query = session.createQuery("select avg(consumeFuel) from Car");
+            c = (Double) query.uniqueResult();
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return averageConsume.get(0);
+        return c;
     }
 }
 

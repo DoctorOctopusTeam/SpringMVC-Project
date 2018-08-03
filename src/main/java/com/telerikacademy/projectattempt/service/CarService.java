@@ -10,5 +10,5 @@ public interface CarService {
 
     public List<Car> listAll();
 
-    public int getAverage(Car car);
+    public Double getAverage(Car car);
 }

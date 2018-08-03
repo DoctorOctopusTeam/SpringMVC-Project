@@ -31,7 +31,7 @@ public class CarController {
     }
 
     @RequestMapping(value = "/get", method = RequestMethod.GET)
-    public int getAverage(Car car){
+    public Double getAverage(Car car){
         return carService.getAverage(car);
     }
 }
