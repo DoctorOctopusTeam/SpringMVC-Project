@@ -28,13 +28,23 @@ $("#button").on('click', function () {
 });
 
 $("#button1").on('click', function () {
+    var car = {
+        make: $('#make1 option:selected').text(),
+        model: $('#model1 option:selected').text(),
+        fuel: $('#fuel1 option:selected').text(),
+        consumeFuel: null
 
-    $.get("http://localhost:8080/api/get/", function (c) {
-        $("<div/>")
-            .html(c)
-            .appendTo(document.body);
+    }
+    console.log(JSON.stringify(car));
+    $.ajax({
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        dataType: 'json',
+        url: "http://localhost:8080/api/get",
+        data: JSON.stringify(car)
     });
 });
+
 
 
 
