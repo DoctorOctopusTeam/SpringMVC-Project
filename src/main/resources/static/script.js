@@ -41,8 +41,20 @@ $("#button1").on('click', function () {
         contentType: "application/json; charset=utf-8",
         dataType: 'json',
         url: "http://localhost:8080/api/get",
-        data: JSON.stringify(car)
+        data: JSON.stringify(car),
+        success: function(result) {
+            // Run the code here that needs
+            //    to access the data returned
+            console.log(result);
+            $("#fuelResult").text(result);
+
+        },
+        error: function() {
+            alert('Error occured');
+        }
     });
+
+
 });
 
 
