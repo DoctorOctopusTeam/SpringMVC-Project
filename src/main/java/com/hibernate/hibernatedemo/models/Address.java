@@ -1,6 +1,7 @@
 package com.hibernate.hibernatedemo.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.annotation.Generated;
 import javax.persistence.*;
@@ -16,7 +17,7 @@ public class Address {
     @Column(name = "AddressText")
     private String addressText;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("address")
     @OneToOne(mappedBy = "address")
     private Employee employee;
 
