@@ -5,6 +5,7 @@ import com.hibernate.hibernatedemo.models.Employee;
 import com.hibernate.hibernatedemo.models.Town;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -18,41 +19,33 @@ public class EntityServiceImpl implements EntityService {
         this.entRepo = entRepo;
     }
 
-    public EntityRepository getEntRepo() {
-        return entRepo;
-    }
-
-    public void setEntRepo(EntityRepository entRepo) {
-        this.entRepo = entRepo;
-    }
-
     @Override
     public Double showAverageSalary() {
-        return null;
+        return entRepo.showAverageSalary();
     }
 
     @Override
     public List<Employee> listAllEmployees() {
-        return null;
+        return entRepo.listAllEmployees();
     }
 
     @Override
     public List<Town> listAllTowns() {
-        return null;
+        return entRepo.listAllTowns();
     }
 
     @Override
     public List<Employee> listAllFromDepartment(String depName) {
-        return null;
+        return entRepo.listAllFromDepartment(depName);
     }
 
     @Override
     public void createNewTown(String townName) {
-
+        entRepo.createNewTown(townName);
     }
 
     @Override
     public String deleteTown(int id) {
-        return null;
+        return entRepo.deleteTown(id);
     }
 }
