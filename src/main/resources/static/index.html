@@ -1,125 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Deyan Peychev</title>
-
+    <title>Title</title>
 </head>
-
 <body>
-<select name="make" id="make">
-    <option value="0">Make</option>
-    <option value="1">BMW</option>
-    <option value="2">Daewoo</option>
-    <option value="3">Ford</option>
-    <option value="4">Holden</option>
-    <option value="5">Honda</option>
-    <option value="6">Hyundai</option>
-    <option value="7">Isuzu</option>
-    <option value="8">Kia</option>
-    <option value="9">Lexus</option>
-    <option value="10">Mazda</option>
-    <option value="11">Mitsubishi</option>
-    <option value="12">Nissan</option>
-    <option value="13">Peugeot</option>
-    <option value="14">Subaru</option>
-    <option value="15">Suzuki</option>
-    <option value="16">Toyota</option>
-    <option value="17">Volkswagen</option>
-</select>
-<!-- Vehicle Model List -->
-<select name="model" id="model">
-    <option value="0">Model</option>
-    <option class="318i" value="1">318i</option>
-    <option class="lanos" value="2">Lanos</option>
-    <option class="courier" value="3">Courier</option>
-    <option class="falcon" value="3">Falcon</option>
-    <option class="festiva" value="3">Festiva</option>
-    <option class="fiesta" value="3">Fiesta</option>
-    <option class="focus" value="3">Focus</option>
-    <option class="laser" value="3">Laser</option>
-    <option class="ranger" value="3">Ranger</option>
-    <option class="territory" value="3">Territory</option>
-    <option class="astra" value="4">Astra</option>
-    <option class="barina" value="4">Barina</option>
-    <option class="captiva" value="4">Captiva</option>
-    <option class="colorado" value="4">Colorado</option>
-    <option class="commodore" value="4">Commodore</option>
-    <option class="cruze" value="4">Cruze</option>
-    <option class="rodeo" value="4">Rodeo</option>
-    <option class="viva" value="4">Viva</option>
-</select>
 
-<select class="fuel" id="fuel">
-<option value="Fuel ">Fuel</option>
-<option class="diesel " value="diesel ">Diesel</option>
-<option class="gasoline " value="gasoline ">Gasoline</option>
-<option class="gass " value="gass ">Gass</option>
+<h1>Choose</h1>
+<button type="button" class="ae" id="13">List all employees</button>
+<button type="button" class="at" id="15">List all towns</button>
+<button type="button" class="as" id="16">Average salary</button>
+<select class="value">
+    <option value="0">-</option>
+    <option value="Engineering">Engineering</option>
+    <option value="Tool Design">Tool Design</option>
+    <option value="Sales">Sales</option>
+    <option value="Marketing">Marketing</option>
+    <option value="Purchasing">Purchasing</option>
+    <option value="Research and Development">Research and Development</option>
+    <option value="Production">Production</option>
+    <option value="Production Control">Production Control</option>
 </select>
+<button type="button" class="asd" id="17">Show all employees from a specific department</button>
+<input type="text" class="ntv" placeholder="Enter name" onfocus="placeholder=''">
+<button type="button" class="mnt" id="20">Make new Town</button>
 
-<input id="km" type="number " placeholder="liters/100km "/>
-<button id="button"type="button" >Submit</button>
+<input type="text" class="dtv" placeholder="Enter id" onfocus="placeholder=''">
+<button type="button" class="dt" id="21">Delete Town</button>
 
-<br>
-<br>
+<button type="button" class="cb" id="14">Clear</button>
 
-<select name="make" id="make1">
-    <option value="0">Make</option>
-    <option value="1">BMW</option>
-    <option value="2">Daewoo</option>
-    <option value="3">Ford</option>
-    <option value="4">Holden</option>
-    <option value="5">Honda</option>
-    <option value="6">Hyundai</option>
-    <option value="7">Isuzu</option>
-    <option value="8">Kia</option>
-    <option value="9">Lexus</option>
-    <option value="10">Mazda</option>
-    <option value="11">Mitsubishi</option>
-    <option value="12">Nissan</option>
-    <option value="13">Peugeot</option>
-    <option value="14">Subaru</option>
-    <option value="15">Suzuki</option>
-    <option value="16">Toyota</option>
-    <option value="17">Volkswagen</option>
-</select>
-<!-- Vehicle Model List -->
-<select name="model" id="model1">
-    <option value="0">Model</option>
-    <option class="318i" value="BMW">318i</option>
-    <option class="lanos" value="2">Lanos</option>
-    <option class="courier" value="3">Courier</option>
-    <option class="falcon" value="3">Falcon</option>
-    <option class="festiva" value="3">Festiva</option>
-    <option class="fiesta" value="3">Fiesta</option>
-    <option class="focus" value="3">Focus</option>
-    <option class="laser" value="3">Laser</option>
-    <option class="ranger" value="3">Ranger</option>
-    <option class="territory" value="3">Territory</option>
-    <option class="astra" value="4">Astra</option>
-    <option class="barina" value="4">Barina</option>
-    <option class="captiva" value="4">Captiva</option>
-    <option class="colorado" value="4">Colorado</option>
-    <option class="commodore" value="4">Commodore</option>
-    <option class="cruze" value="4">Cruze</option>
-    <option class="rodeo" value="4">Rodeo</option>
-    <option class="viva" value="4">Viva</option>
-</select>
 
-<select class="fuel" id="fuel1">
-    <option value="Fuel ">Fuel</option>
-    <option class="diesel " value="diesel ">Diesel</option>
-    <option class="gasoline " value="gasoline ">Gasoline</option>
-    <option class="gass " value="gass ">Gass</option>
-</select>
-<button id="button1"type="button" >Get</button>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
-<script src="script.js "></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js.js"></script>
 
 </body>
-
 </html>
