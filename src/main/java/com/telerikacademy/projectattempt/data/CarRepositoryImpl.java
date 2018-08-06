@@ -47,14 +47,14 @@ public class CarRepositoryImpl implements CarRepository {
         return cars;
     }
 
-    //gets the average consume, but only print it in console -> there is no get method to display in html
     @Override
     public Double getAverage(Car car) {
         Double c = 0.0;
 
         try (Session session = factory.openSession()) {
             session.beginTransaction();
-            Query query = session.createQuery("select avg(consumeFuel) from Car carr where carr.make = :make").setProperties(car);
+            Query query = session.createQuery("select round(avg(consumeFuel),2) from Car carr where " +
+                    "carr.make = :make AND carr.model = :model AND carr.fuel = :fuel").setProperties(car);
             c = (Double) query.uniqueResult();
             System.out.println(c);
             session.getTransaction().commit();

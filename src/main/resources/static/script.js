@@ -9,6 +9,17 @@ $(document).ready(function () {
     }).trigger('change');
 });
 
+$(document).ready(function () {
+    var $make = $('#make1'),
+        $model = $('#model1'),
+        $options = $model.find('option');
+
+    $make.on('change', function () {
+        $model.html($options.filter('[value="' + this.value + '"]'));
+        $model.trigger('change');
+    }).trigger('change');
+});
+
 $("#button").on('click', function () {
     var car = {
         make: $('#make option:selected').text(),
@@ -50,7 +61,7 @@ $("#button1").on('click', function () {
 
         },
         error: function() {
-            alert('Error occured');
+            alert('Nothing found with these parameters');
         }
     });
 

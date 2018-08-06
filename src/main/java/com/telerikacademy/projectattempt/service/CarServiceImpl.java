@@ -3,11 +3,11 @@ package com.telerikacademy.projectattempt.service;
 import com.telerikacademy.projectattempt.data.CarRepository;
 import com.telerikacademy.projectattempt.models.Car;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.*;
 
 import java.util.List;
 
-@Component
+@Service
 public class CarServiceImpl implements CarService {
     private CarRepository carRepository;
 

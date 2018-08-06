@@ -20,7 +20,7 @@ public class Car {
     private String fuel;
 
     @Column(name = "consume")
-    private int consumeFuel;
+    private double consumeFuel;
 
     public Car() {
 
@@ -34,7 +34,7 @@ public class Car {
         this.id = id;
     }
 
-    public Car(int id, String make, String model, String fuel, int consumeFuel) {
+    public Car(int id, String make, String model, String fuel, double consumeFuel) {
         this.id = id;
 
         this.make = make;
@@ -68,11 +68,11 @@ public class Car {
         this.fuel = fuel;
     }
 
-    public float getConsumeFuel() {
+    public double getConsumeFuel() {
         return consumeFuel;
     }
 
-    public void setConsumeFuel(int consumeFuel) {
+    public void setConsumeFuel(double consumeFuel) {
         this.consumeFuel = consumeFuel;
     }
 }
