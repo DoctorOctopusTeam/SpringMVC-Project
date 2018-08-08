@@ -20,19 +20,10 @@ import java.util.List;
 public class FirstController {
     private EntityService entService;
 
-    @Autowired
+    //@Autowired
     public FirstController(EntityService entService){
         this.entService = entService;
     }
-
-    SessionFactory f = new Configuration()
-            .configure("hibernate.cfg.xml")
-            .addAnnotatedClass(Employee.class)
-            .addAnnotatedClass(Address.class)
-            .addAnnotatedClass(Department.class)
-            .addAnnotatedClass(Project.class)
-            .addAnnotatedClass(Town.class)
-            .buildSessionFactory();
 
     @RequestMapping("/averagesalary")
     public Double showAverageSalary(){

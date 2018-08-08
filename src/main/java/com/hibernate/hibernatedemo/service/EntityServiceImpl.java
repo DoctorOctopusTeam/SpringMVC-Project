@@ -9,12 +9,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
+
 public class EntityServiceImpl implements EntityService {
 
     private EntityRepository entRepo;
 
-    @Autowired
     public EntityServiceImpl(EntityRepository entRepo){
         this.entRepo = entRepo;
     }
