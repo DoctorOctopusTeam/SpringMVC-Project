@@ -15,7 +15,7 @@ public class Config {
     @Bean
     public SessionFactory createSessFak() {
         return new org.hibernate.cfg.Configuration()
-                .configure("static/hibernate.cfg.xml")
+                .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Employee.class)
                 .addAnnotatedClass(Address.class)
                 .addAnnotatedClass(Department.class)

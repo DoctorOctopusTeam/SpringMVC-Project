@@ -46,24 +46,6 @@ public class FirstController {
         return entService.deleteTown(id);
     }
 
-    @RequestMapping("/aaa")
-    public Address showEmployee(){
-        SessionFactory f = new Configuration()
-                .configure("static/hibernate.cfg.xml")
-                .addAnnotatedClass(Employee.class)
-                .addAnnotatedClass(Address.class)
-                .addAnnotatedClass(Department.class)
-                .addAnnotatedClass(Project.class)
-                .addAnnotatedClass(Town.class)
-                .buildSessionFactory();
-        Session s = f.openSession();
-        s.beginTransaction();
-        //Employee e = s.get(Employee.class, 1);
-        Address e = s.get(Address.class, 1);
-        s.getTransaction().commit();
-        s.close();
-        return e;
-    }
 
 
 

@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 public class NewMain {
     public static void main(String[] args){
         SessionFactory fak = new Configuration()
-                .configure("static/hibernate.cfg.xml")
+                .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Employee.class)
                 .addAnnotatedClass(Town.class)
                 .addAnnotatedClass(Address.class)

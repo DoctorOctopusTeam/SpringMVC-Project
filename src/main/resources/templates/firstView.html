@@ -6,6 +6,15 @@
 </head>
 <body>
 <h2 th:text="'AAAAAAAAAAAAAAAAAAAAAAAAAA'"></h2>
+<!--<p th:text="'Hello ' + ${name}"></p>-->
+<p th:text="${#session.getAttribute('name')}"></p>
+<!--<p th:text="${session.name}"></p>-->
+<div th:object="${pederaz}">
+    <p th:text="*{getName()}"></p>
+</div>
+
+
+
 
 <br />
 
