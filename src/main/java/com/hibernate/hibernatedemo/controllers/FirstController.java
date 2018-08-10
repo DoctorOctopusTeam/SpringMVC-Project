@@ -2,25 +2,17 @@ package com.hibernate.hibernatedemo.controllers;
 
 import com.hibernate.hibernatedemo.models.*;
 import com.hibernate.hibernatedemo.service.EntityService;
-import javafx.scene.control.Alert;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.query.Query;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.io.Console;
 import java.util.List;
 
 @RestController
 public class FirstController {
     private EntityService entService;
 
-    //@Autowired
     public FirstController(EntityService entService){
         this.entService = entService;
     }
@@ -57,7 +49,7 @@ public class FirstController {
     @RequestMapping("/aaa")
     public Address showEmployee(){
         SessionFactory f = new Configuration()
-                .configure("hibernate.cfg.xml")
+                .configure("static/hibernate.cfg.xml")
                 .addAnnotatedClass(Employee.class)
                 .addAnnotatedClass(Address.class)
                 .addAnnotatedClass(Department.class)

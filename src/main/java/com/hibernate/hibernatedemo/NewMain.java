@@ -3,14 +3,12 @@ package com.hibernate.hibernatedemo;
 import com.hibernate.hibernatedemo.models.*;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class NewMain {
     public static void main(String[] args){
         SessionFactory fak = new Configuration()
-                .configure("hibernate.cfg.xml")
+                .configure("static/hibernate.cfg.xml")
                 .addAnnotatedClass(Employee.class)
                 .addAnnotatedClass(Town.class)
                 .addAnnotatedClass(Address.class)
