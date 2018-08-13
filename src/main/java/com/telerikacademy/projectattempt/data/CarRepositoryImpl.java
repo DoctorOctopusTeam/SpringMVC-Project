@@ -54,14 +54,15 @@ public class CarRepositoryImpl implements CarRepository {
         try (Session session = factory.openSession()) {
             session.beginTransaction();
             Query query = session.createQuery("select round(avg(consumeFuel),2) from Car carr where " +
-                    "carr.make = :make AND carr.model = :model AND carr.fuel = :fuel").setProperties(car);
+                    "carr.make = :make AND " +
+                    "carr.model = :model AND " +
+                    "carr.fuel = :fuel").setProperties(car);
             c = (Double) query.uniqueResult();
             System.out.println(c);
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return c;
     }
 }
