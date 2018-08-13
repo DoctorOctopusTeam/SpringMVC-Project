@@ -1,0 +1,22 @@
+body{
+    background: cornflowerblue;
+}
+/*.outer{*/
+    /*height: 400px;*/
+/*}*/
+.inner{
+    margin-top: 60px;
+    text-align: center;
+    height: 400px;
+    background: lightblue;
+    border-radius: 5px;
+}
+button{
+    margin-top: 30px;
+    border-radius: 5px;
+    border-style: none;
+}
+input{
+    border-radius: 5px;
+    border-style: none;
+}

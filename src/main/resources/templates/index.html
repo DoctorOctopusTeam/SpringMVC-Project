@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+<a th:href="@{/second}">Link</a>
+<header th:insert="~{fragments/header :: fragment1}"></header>
+<!--<th:block th:insert="~{index1}"></th:block>-->
+<form method="post">
+    <label>Label</label>
+    <input type="text" name="id">
+    <input type="submit" value="Cuk">
+</form>
+
+
+<!--<div class="outer">-->
+    <!--<div class="inner">-->
+        <!--<button type="button" class="se">Show employee</button>-->
+        <!--<input type="text" name="id" class="s"  placeholder="Enter ID" onfocus="placeholder=''">-->
+        <!--<input type="submit" value="cuk">-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+</body>
+</html>

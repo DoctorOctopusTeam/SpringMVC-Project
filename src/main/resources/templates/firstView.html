@@ -5,17 +5,16 @@
     <title>Hello</title>
 </head>
 <body>
+<h1 th:text="${name1}"></h1>
 <h2 th:text="'AAAAAAAAAAAAAAAAAAAAAAAAAA'"></h2>
 <!--<p th:text="'Hello ' + ${name}"></p>-->
 <p th:text="${#session.getAttribute('name')}"></p>
-<!--<p th:text="${session.name}"></p>-->
-<div th:object="${pederaz}">
-    <p th:text="*{getName()}"></p>
-</div>
+<p th:text="${session.name}"></p>
+<p id="nasko">Mmamamamamamamammamamama</p>
+<form>
+    <p></p>
 
-
-
-
+</form>
 <br />
 
 </body>
